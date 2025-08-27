@@ -3,5 +3,5 @@
 #outputs
 
 #inputs
-age=input("what is your age ")
-print("you are", age) 
+math= 3**3
+print (math)
