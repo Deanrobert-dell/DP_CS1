@@ -27,3 +27,4 @@ elif classes == 5:
     period5 = int(input("what is your grade for period 5: "))
     avgrade = float((period1 + period2 + period3 + period4 + period5) / 5)
     print(round(avgrade, 2))
+
