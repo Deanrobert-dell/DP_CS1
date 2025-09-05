@@ -1,16 +1,13 @@
-name = input("What is your name: ").strip().title()
+#DP 2nd idiotproof
+name = input("What is your name: ").strip().capitalize()
+last_name = input ("what is your last name: ").strip().capitalize()
 pnumber = input ("what is your phone number: ").strip()
 gpa = input("what is your gpa: ").strip()
 word = "-"
-name_nospaces = name.replace(" ", "")
-print(name_nospaces)
-print(pnumber.replace(word, ' '))
+fixedpnumber = pnumber.replace(word, ' ')
+gpa_nospaces = gpa.replace(" ", "")
+name_nospace = name.replace(" ", "")
+last_name_nospace = last_name.replace(" ", "")
 
 
-
-
-if (gpa).isnumeric():
-    print (gpa)
-else: 
-    print ("put in numerical data for gpa")
-
+print("hello " + name_nospace +" "+ last_name_nospace + " your number is " + fixedpnumber + " your gpa is " + gpa_nospaces)
