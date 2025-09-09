@@ -7,4 +7,4 @@ math= 3**3
 print (math)
 1=2
 
-
+#rizz
