@@ -7,4 +7,4 @@ print (random.randint(1,20))
 
 number = 1
 while number == 1:
-    print("67")
+    print(int("67")) + 1
