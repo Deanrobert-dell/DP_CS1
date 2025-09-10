@@ -1,10 +1,10 @@
 # DP 2nd Inputs & Outputs
 
-#outputs
+import random
 
-#inputs
-math= 3**3
-print (math)
-1=2
+print (random.random())
+print (random.randint(1,20))
 
-#rizz
+number = 1
+while number == 1:
+    print("67")

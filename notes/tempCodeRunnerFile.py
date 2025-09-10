@@ -1,1 +1,1 @@
-format
+print (random.random())
