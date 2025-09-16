@@ -5,4 +5,6 @@ members = input ("how maney crew members are their (besides captain and firstmat
 mofoev = 500 * float(members)
 share = 7 + 3 + float(members)
 
-print ("captain gets" )
+print ("captain gets", 7 * share )
+print ("firstmate gets", 3 * share)
+print ("crew still needs", share *  )
