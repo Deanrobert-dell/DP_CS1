@@ -7,4 +7,9 @@ print (random.randint(1,20))
 
 number = 1
 while number == 1:
-    print(int("67")) + 1
+    print(int("4") + 1)
+
+print ("new seat 9/17")
+
+
+
