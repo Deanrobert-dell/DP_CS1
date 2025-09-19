@@ -13,7 +13,7 @@ while number == 2:
 print ("new seat 9/17")
 currenttime = time.time()
 readable_time = time.ctime(currenttime)
-now= date.datetime.novvvw()
+now= date.datetime.now()
 hour=now.strftime("%H ""%M")
 #month %m or %B, minute %M, second %S, day %D, year %Y or %y 
 
