@@ -4,7 +4,7 @@
 username = input ("enter username: ")
 login = input ("enter password: ")
 
-#checks if username and password matches if they dont, then dont signin
+#checks if username and password matches if they dont, then dont sign in
 if username == "dean" and login == "12345":
     print ("signing in...")
 elif username == "dean" and login != "12345":
