@@ -23,3 +23,28 @@ print (f"current time: {now}")
 print (F"mil time is {hour}")
 
 
+nums= [1, 2, 4]
+
+for num in nums:
+    div = num/2
+    if div> 100:
+        print (f"{div}is half of {num}. and it is still large ")
+    else:
+        print (num)
+
+
+
+for x in range(1,10):
+    print (x)
+
+print ("hello")
+
+
+for x in range(2,11,2):
+    print (x)
+
+print ("countdown")
+
+
+for x in range(999999,0,-1):
+    print (x)
