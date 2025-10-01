@@ -13,10 +13,6 @@ while True:
     elif action == "2":
         print("removeable items are,", shopping_list)
         remove = input("what do you want to remove: ")
-        if remove not in shopping_list:
-            print ("invalid item")
-        else:
-            break
         shopping_list.remove(remove)
         print ("shopping list is now: ",shopping_list)
         #removes item from list by input
