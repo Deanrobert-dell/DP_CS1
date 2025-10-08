@@ -13,7 +13,8 @@ scissor = "Ʌ     Ʌ\n\\\   //\n \\\_//\n  (_)\n/\   /\ \n\/   \/ "
 paper = " ______\n/     /\n|     |\n\\_____\\"
 
 
-while user_score <= 5 and comp_score <=5:
+while user_score < 5 and comp_score < 5:
+    random_move= random.randint(1,3)
     if random_move == 1:
         comp_move = (rock)
     elif random_move == 2:
@@ -22,7 +23,7 @@ while user_score <= 5 and comp_score <=5:
         comp_move = (scissor)
     else:
         print("error")
-    print (comp_move)
+
     print ("computer chose, your turn \n")
 
     user_input = input("choose rock (1) paper (2) scissors (3) or quit (4): ")
@@ -39,6 +40,45 @@ while user_score <= 5 and comp_score <=5:
     else:
         print("error")
     print (user_move)
+
+
+    if user_move == rock and comp_move == paper:
+        print ("comp chose paper, you lost")
+        comp_score += 1
+    elif user_move == rock and comp_move == scissor:
+        print ("comp chose scissors, you won")
+        user_score += 1
+    elif user_move == rock and comp_move == rock:
+        print ("comp chose rock, you tied")
+        user_score += 0
+    elif user_move == paper and comp_move == rock:
+        print ("comp chose rock, you won")
+        user_score += 1
+    elif user_move == paper and comp_move == scissor:
+        print ("comp chose scissors, you lost")
+        comp_score += 1
+    elif user_move == paper and comp_move == paper:
+        print ("comp chose paper, you tied")
+        user_score += 0
+    elif user_move == scissor and comp_move == rock:
+        print ("comp chose rock, you lost")
+        comp_score += 1
+    elif user_move == scissor and comp_move == paper:
+        print ("comp chose paper, you won")
+        user_score += 1
+    elif user_move == scissor and comp_move == scissor:
+        print ("comp chose scissor, you tied")
+        user_score += 0
+    else:
+        print("wrong input")
+        continue
+    if user_score >= 5:
+        print ('you won yippee')
+        break
+    if comp_score >= 5:
+        print ("computer won, you suck")
+        break
+    print ("your score is", user_score, "computer score is", comp_score)
     
 
 
