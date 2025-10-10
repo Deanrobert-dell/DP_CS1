@@ -1,10 +1,8 @@
-import random
 
-randmove = random.randint (1,3)
-print (randmove)
+board = [1,2,3,4,5,6,7,8,9]
 
-row_one = [1,2,3]
-row_two = [1,2,3]
-row_three = [1,2,3]
-print (*row_one)
 
+
+
+
+print( f" {board[0]} {board[1]} {board[2]} \n {board[3]} {board[4]} {board[5]} \n {board[6]} {board[7]} {board[8]}")
