@@ -3,6 +3,8 @@ strength = (0)
 #variables for upper and lower
 uppercase = False
 lowercase = False
+digit = False
+char = False
 # create different progress levels as variable
 bar1 = (" ________ \n/")
 bar2 = (" ________ \n//     ")
@@ -10,29 +12,39 @@ bar3 = (" ________ \n////   ")
 bar4 = (" ________ \n/////  ")
 bar5 = (" ________ \n/////////")
 
-#variables for numbers
-num1 = ("1")
-num2 = ("2")
-num3 = ("3")
-num4 = ("4")
-num5 = ("5")
-num6 = ("6")
-num7 = ("7")
-num8 = ("8")
-num9 = ("9")
-num0 = ("0")
-
+#variables for special charachter
+char1 = ("!")
+char2 = ("@")
+char3 = ("#")
+char4 = ("$")
+char5 = ("%")
+char6 = ("^")
+char7 = ("&")
+char8 = ("*")
+char9 = ("(")
+char10 = (")")
+char11 = ("_")
+char12 = ("+")
+char13 = ("=")
+char14 = ("[")
+char15 = ("]")
+char16 = ("{")
+char17 = ("}")
+char18 = (";")
+char19 = (":")
+char20 = ("<")
+char21 = (">")
+char22 = ("?")
 
 #input asking for password
 password = input("what is your password: ")
 
-#make list from password
-pass_list = list(password)
-
-print (pass_list)
+#turn password into list
+password_list = list(password)
 
 #variable for length
 length = len(password)
+
 #if statement for password length checking if it is longer than 8 charachters
 if length >= 8:
     print ("long enough password ✓")
@@ -45,17 +57,20 @@ for item in password:
     if item.isupper():
         uppercase = True
         break 
+
 # if statement for upper case letter
 if uppercase:
     print("contains upper case ✓")
     strength += 1
 else:
     print("you need an upper case letter")
+
 # create for statement checking if an individual charachter is lower case
 for item in password:
     if item.islower():
         lowercase = True
         break 
+
 # if statement for upper case letter
 if lowercase:
     print("contains lower case ✓")
@@ -63,31 +78,29 @@ if lowercase:
 else:
     print("you need a lower case letter")
 
+#Checks for number using for loop
+for i in password:
+    if item.isdigit():
+        digit = True
+        break 
 
-#Checks for number after converting to list
-
-if num1 or num2 or num3 or num4 or num5 or num6 or num7 or num8 or num9 or num0 in pass_list:
-    print("you have a number ✓")
+#if statement for digit
+if digit:
+    print("contains number✓")
     strength += 1
 else:
-    print ("password needs number")
+    print("you need a number")
+
+#find if special charachters in list version of password
+if char1 in password_list or char2 in password_list or char3 in password_list:
+    print("you have special charachter✓")
+    strength += 1
+else:
+    print("you need special charachter")
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#print strenth
+print (strength)
 
 
 
