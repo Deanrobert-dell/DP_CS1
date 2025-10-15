@@ -82,7 +82,24 @@ if char:
 else: 
     print ("need special charachter")
 #print strenth
-print (strength)
+print ("your password strength is an",strength, "out of 5")
+
+if strength == 1:
+    print (bar1)
+if strength == 2:
+    print (bar2)
+if strength == 3:
+    print (bar3)
+if strength == 4:
+    print (bar4)
+if strength == 5:
+    print (bar5)
+else:
+    print ("bye bye")
+    
+ 
+
+
 
 
 
