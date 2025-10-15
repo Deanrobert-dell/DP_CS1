@@ -59,7 +59,7 @@ else:
 
 #Checks for number using for loop
 for i in password:
-    if item.isdigit():
+    if i.isdigit():
         digit = True
         break 
 
@@ -73,11 +73,14 @@ else:
 #find if special charachters in list version of password
 for x in password:
     if x in char1:
-        print("you have a special chrachter✓")
-        strength += 1
-    else: 
-        print ("need special charachter
+        char = True
+        break 
 
+if char:
+    print("you have a special chrachter✓")
+    strength += 1
+else: 
+    print ("need special charachter")
 #print strenth
 print (strength)
 
