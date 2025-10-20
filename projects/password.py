@@ -13,28 +13,7 @@ bar4 = (" ________ \n/////  ")
 bar5 = (" ________ \n/////////")
 
 #variables for special charachter
-char1 = ("!")
-char2 = ("@")
-char3 = ("#")
-char4 = ("$")
-char5 = ("%")
-char6 = ("^")
-char7 = ("&")
-char8 = ("*")
-char9 = ("(")
-char10 = (")")
-char11 = ("_")
-char12 = ("+")
-char13 = ("=")
-char14 = ("[")
-char15 = ("]")
-char16 = ("{")
-char17 = ("}")
-char18 = (";")
-char19 = (":")
-char20 = ("<")
-char21 = (">")
-char22 = ("?")
+char1 = "!@#$%^&*()_+=<>?[]{}"
 
 #input asking for password
 password = input("what is your password: ")
@@ -80,7 +59,7 @@ else:
 
 #Checks for number using for loop
 for i in password:
-    if item.isdigit():
+    if i.isdigit():
         digit = True
         break 
 
@@ -92,15 +71,35 @@ else:
     print("you need a number")
 
 #find if special charachters in list version of password
-if char1 in password_list or char2 in password_list or char3 in password_list:
-    print("you have special charachter✓")
+for x in password:
+    if x in char1:
+        char = True
+        break 
+
+if char:
+    print("you have a special chrachter✓")
     strength += 1
-else:
-    print("you need special charachter")
-
-
+else: 
+    print ("need special charachter")
 #print strenth
-print (strength)
+print ("your password strength is an",strength, "out of 5")
+
+if strength == 1:
+    print (bar1)
+elif strength == 2:
+    print (bar2)
+elif strength == 3:
+    print (bar3)
+elif strength == 4:
+    print (bar4)
+elif strength == 5:
+    print (bar5)
+else:
+    print ("bye bye")
+    
+ 
+
+
 
 
 
