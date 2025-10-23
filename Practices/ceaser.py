@@ -1,41 +1,39 @@
 #DP 2nd ceasar code
-
+#list of letters to be used
 letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-code = input("what is your password: ")
+#function with shift and code type
+#also add + shift and -shift for decode/encode
+def caesar(text, shift, code):
+    result = ""
+    text = text.upper()
 
-a = 0
-b = 1
-c = 2
-d = 3
-e = 4
-f = 5
-g = 6
-h = 7
-i = 8
-j = 9
-k = 10
-l = 11
-m = 12
-n = 13
-o = 14
-p = 15
-q = 16
-r = 17
-s = 18
-t = 19
-u = 20
-v = 21
-w = 22
-x = 23
-y = 24
-z = 25
+    for char in text:
+        if char in letters:
+            index = letters.index(char)
+            if code == "encode":
+                new_index = (index + shift) %26
+            else:
+                new_index = (index - shift) %26
+            result += letters [new_index]
+        else:
+                result += char
+    return result
+    
 
 
+#message to be decoded or encoded use 1 and 2 for input
+code = input("enter message: ") 
 question = input("do you want to encode (1) or decode (2)")
+#if statement to determine encode or decode and print results
+if question == "1":
+    shift = int(input("Enter shift number: "))
+    print("Encoded message:", caesar(code, shift, "encode"))
+elif question == "2":
+    shift = int(input("Enter shift number: "))
+    print("Decoded message:", caesar(code, shift, "decode"))
+else:
+    print("Invalid option.")
 
-
-for index, value in enumerate(letters):
-    print(f"Index: {index}, Value: {value}")
 
 
 
