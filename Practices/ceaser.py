@@ -42,14 +42,5 @@ for index, value in enumerate(letters):
 
 
 
-for x in code:
-    if x in letters:
-        char = True
-        break 
 
-if char:
-    print("you have a special chrachter✓")
-    strength += 1
-else: 
-    print ("need special charachter")
 
