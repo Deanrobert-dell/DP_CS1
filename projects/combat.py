@@ -74,7 +74,7 @@ def player_turn():
             print("You fled!")
             return "fled"
         else:
-            print("Failed to flee.")
+            print("Failed to runn away.")
 
 def monster_turn():
     global hp, m_damage
@@ -83,7 +83,7 @@ def monster_turn():
     print("Monster hits you for", dmg)
 #random turns
 turn = random.randint(1,2)
-print("\nYou go first!" if turn == 1 else "\nMonster goes first!")
+print("\nYou go first" if turn == 1 else "\nMonster goes first!")
 #while loop to keep game running
 while hp > 0 and m_health > 0:
     if turn == 1: 
@@ -99,4 +99,4 @@ while hp > 0 and m_health > 0:
 if hp <= 0:
     print("\nYou died.")
 elif m_health <= 0:
-    print("\nYou defeated the monster!")
+    print("\nYou beat the monster yippee")
