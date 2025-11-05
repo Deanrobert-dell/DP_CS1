@@ -24,22 +24,7 @@ box.forward(225)
 box.right(90)
 box.forward(500)
 
-box1= turtle.Turtle()
-box1.setpos(-50,0)
-box1.penup()
-box1.forward(-450)
-box1.pendown()
-box1.forward(-225)
-box1.left (90)
-box1.forward (500)
-box1.right(90)
-box1.forward (225)
-box1.penup()
-box1.forward(50)
-box1.pendown()
-box1.forward(225)
-box1.right(90)
-box1.forward(500)
+
 
 
 line = turtle.Turtle()
