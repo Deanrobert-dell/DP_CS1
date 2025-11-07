@@ -20,6 +20,27 @@ box.forward(200)
 box.right(90)
 box.forward(500)
 
+
+path = turtle.Turtle()
+path.speed(0)
+path.penup()
+cords = (-225, 475)
+path.hideturtle()
+path.setpos(-225, 25)
+path.left(90)
+while path.pos() != cords:
+    path.pendown()
+    rand1 = random.randint(1,3)
+    if rand1 == 1:
+        path.forward(50)
+        if path.xcor() < -700 or path.xcor() > -200:
+            path.right(180)
+    if rand1 == 2:
+        path.right(90)
+    if rand1 == 3:
+        path.left(90)
+
+
 line = turtle.Turtle()
 line1 = turtle.Turtle()
 line2 = turtle.Turtle()
@@ -92,7 +113,7 @@ up.left(90)
 while up.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up.penup()
+        up.pendown()
         up.forward(50)
     else:
         up.pendown()
@@ -104,7 +125,7 @@ up1.left(90)
 while up1.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up1.penup()
+        up1.pendown()
         up1.forward(50)
     else:
         up1.pendown()
@@ -116,7 +137,7 @@ up2.left(90)
 while up2.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up2.penup()
+        up2.pendown()
         up2.forward(50)
     else:
         up2.pendown()
@@ -128,7 +149,7 @@ up3.left(90)
 while up3.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up3.penup()
+        up3.pendown()
         up3.forward(50)
     else:
         up3.pendown()
@@ -140,7 +161,7 @@ up4.left(90)
 while up4.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up4.penup()
+        up4.pendown()
         up4.forward(50)
     else:
         up4.pendown()
@@ -152,7 +173,7 @@ up5.left(90)
 while up5.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up5.penup()
+        up5.pendown()
         up5.forward(50)
     else:
         up5.pendown()
@@ -164,7 +185,7 @@ up6.left(90)
 while up6.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up6.penup()
+        up6.pendown()
         up6.forward(50)
     else:
         up6.pendown()
@@ -176,7 +197,7 @@ up7.left(90)
 while up7.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up7.penup()
+        up7.pendown()
         up7.forward(50)
     else:
         up7.pendown()
@@ -188,7 +209,7 @@ up8.left(90)
 while up8.ycor() < 500:
     rand=random.randint(1,2)
     if rand == 1:
-        up8.penup()
+        up8.pendown()
         up8.forward(50)
     else:
         up8.pendown()
@@ -199,7 +220,7 @@ line.setpos(-500,50)
 while line.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line.penup()
+        line.pendown()
         line.forward(50)
     else:
         line.pendown()
@@ -210,7 +231,7 @@ line1.setpos(-500,100)
 while line1.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line1.penup()
+        line1.pendown()
         line1.forward(50)
     else:
         line1.pendown()
@@ -221,7 +242,7 @@ line2.setpos(-500,150)
 while line2.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line2.penup()
+        line2.pendown()
         line2.forward(50)
     else:
         line2.pendown()
@@ -232,7 +253,7 @@ line3.setpos(-500,200)
 while line3.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line3.penup()
+        line3.pendown()
         line3.forward(50)
     else:
         line3.pendown()
@@ -243,7 +264,7 @@ line4.setpos(-500,250)
 while line4.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line4.penup()
+        line4.pendown()
         line4.forward(50)
     else:
         line4.pendown()
@@ -254,7 +275,7 @@ line5.setpos(-500,300)
 while line5.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line5.penup()
+        line5.pendown()
         line5.forward(50)
     else:
         line5.pendown()
@@ -265,7 +286,7 @@ line6.setpos(-500,350)
 while line6.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line6.penup()
+        line6.pendown()
         line6.forward(50)
     else:
         line6.pendown()
@@ -276,7 +297,7 @@ line7.setpos(-500,400)
 while line7.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line7.penup()
+        line7.pendown()
         line7.forward(50)
     else:
         line7.pendown()
@@ -287,7 +308,7 @@ line8.setpos(-500,450)
 while line8.xcor() < 0:
     rand=random.randint(1,2)
     if rand == 1:
-        line8.penup()
+        line8.pendown()
         line8.forward(50)
     else:
         line8.pendown()
