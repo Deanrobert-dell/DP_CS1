@@ -7,7 +7,7 @@ import random
 screen=turtle.Screen()
 screen.setup(1650,900)
 t1= turtle.Turtle()
-t2= turtle.Turtle()
+t2= turtle.Turtle()   
 t3= turtle.Turtle()
 t4= turtle.Turtle()
 t5= turtle.Turtle()
