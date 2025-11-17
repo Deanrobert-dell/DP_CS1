@@ -10,23 +10,23 @@ Food = {"sandwiches": {"hamburger": 4.99, "BLT": 3.99, "grilled-cheese": 2.99, "
 print("drink options are: ")
 print(Food["drinks"])
 drink = input("choose a drink from that list: ")
-print(f"cost of drink is {Food["drinks"][drink]}") #take value of drink that i inputted
+print(f"cost of drink is {Food['drinks'][drink]}") #take value of drink that i inputted
 meal1 = Food["drinks"][drink]
 
 #options for meals
 print("meals options are: ")
 print(Food["meals"])
 meal = input("choose a meal from the list: ")
-print(f"cost of main meal is {Food["meals"][meal]}")#take value of meal that i inputted
+print(f"cost of main meal is {Food['meals'][meal]}")#take value of meal that i inputted
 meal2 = Food["meals"][meal]
 
 #2 options for side dishes
 print("sandwiches options are: ")
 print(Food["sandwiches"])
 sandwich = input("choose a sandwich from list: ")
-print(f"cost of sandwich is {Food["sandwiches"][sandwich]}")#take value of sandwich that i inputted
+print(f"cost of sandwich is {Food['sandwiches'][sandwich]}")#take value of sandwich that i inputted
 sandwich2 = input("choose a second sandwich: ")
-print(f"cost of sandwich 2 is {Food["sandwiches"][sandwich2]}")#take value of sandwich 2 that i inputted
+print(f"cost of sandwich 2 is {Food['sandwiches'][sandwich2]}")#take value of sandwich 2 that i inputted
 meal3 = Food["sandwiches"][sandwich]
 meal4 = Food["sandwiches"][sandwich2]
 
