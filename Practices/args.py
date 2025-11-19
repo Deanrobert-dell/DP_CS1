@@ -6,7 +6,7 @@ def calculator(*numbers):
     numbers = input("type numbers seprataed by spaces, ex: 1 5 98: " )
     list = numbers.split()
     print(list)
-    options = int(input("do you want to do average (1), sum(2), product(3), max(4), or minimum(5)"))
+    options = int(input("do you want to do average (1), sum(2), product(3), max(4), or minimum(5): "))
     if options == 1:
         average = sum(list) / len(list)
         print(f"The average is: {average}")
