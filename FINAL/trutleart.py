@@ -122,7 +122,7 @@ eye.forward(15)
 
 
 t1= turtle.Turtle()
-font_style = ("poppins", 25, "normal")
+font_style = ("Times New Roman", 25, "normal")
 t1.hideturtle()
 t1.penup()
 t1.goto(0,-150)
@@ -271,7 +271,7 @@ t1.clear()
 time.sleep(.2)
 
 t2= turtle.Turtle()
-font_style = ("poppins", 25, "normal")
+font_style = ("Times New Roman", 25, "normal")
 t2.hideturtle()
 t2.penup()
 t2.goto(0,-150)
