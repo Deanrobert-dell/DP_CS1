@@ -1,6 +1,8 @@
 import turtle
 import time
 
+screen = turtle.Screen()
+
 eye = turtle.Turtle()
 eye.width(3)
 eye.speed(0)
@@ -263,10 +265,20 @@ dot.forward(10)
 dot.right(6)
 dot.forward(10)
 
-time.sleep
+time.sleep(.2)
 t1.clear()
 
+time.sleep(.2)
 
+t2= turtle.Turtle()
+font_style = ("poppins", 25, "normal")
+t2.hideturtle()
+t2.penup()
+t2.goto(0,-150)
+t2.pendown()
+t2.write("click to continue", font=font_style, align="center")
+
+screen.exitonclick()
 
 
 
