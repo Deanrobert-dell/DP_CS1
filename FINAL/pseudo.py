@@ -1,4 +1,4 @@
-#variables: health damage luck 
+#variables: health damage defense
 #variable for secret room, changes if room is entered so room cant be entered again
 #dictionary for "inventory"
 
@@ -28,21 +28,29 @@
 #ROOM3
 #description
 #do you wish to investigate suspicious wall, or move on forward or to thr right
+#leads to secret room
+#nothing else in room
 
 
 #ROOM4
+# as player enters, they are attacked by a mummy fo -1 health
+#if player dies allow them to restart
+#if player wins recieve khopesh sword for +2 damage
 
 
 
 #ROOM5
-
+# as player enters there is a well, sacrifice 1 health to gain random item
+#leads to  3 2 and 7
 
 
 #ROOM6
-
+# as they enter enter fight with giant scarab beetle
+# if they win they can equip scarab shell sheild or 2 defense
 
 
 #ROOM7
+#in the room there are 3 alters each one with an item for either health damage or defense, the player thinks they can get all three, but once they get one the room crumbles and falls and they are forced into the boss room
 
 
 

@@ -133,6 +133,7 @@ t1.write("LOADING...", font=font_style, align="center")
 
 
 dot = turtle.Turtle()
+
 dot.penup()
 dot.speed(5)
 dot.hideturtle()
