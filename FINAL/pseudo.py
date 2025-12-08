@@ -1,10 +1,29 @@
 # VARIABLES
 
 # variables: health, damage, defense
+hp = 100
+dp = 10
+defense = 0
 # dictionary for inventory
+items = []
 # boolean variables for each room so interactions can't happen twice
-# variable for secret room, changes if room is entered so room cant be entered again
+room1 = False
+room2 = False
+room3 = False
+room4 = False
+room5 = False
+room6 = False
+room7 = False
+roomSecret = False
+roomBoss = False
+
 # enemy state variables like mummy, scarab, boss
+mummy= 30
+mummyD = 6
+scarab = 50
+scarabD = 4
+boss = 120
+bossD = 15
 
 #game functions
 
