@@ -28,7 +28,9 @@ bossD = 15
 #game functions
 
 # startGame()
+def startgame():
 #   print statement welcoming player
+    print("You enter the pyramid, and the opening behind you crumbles shut, you are stuck")
 #   print backstory explaining where you are (in pyramid 
 #   ask user if they wish to play the game now that they know what happens
 #   if yes go to room1
