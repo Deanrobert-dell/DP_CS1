@@ -29,14 +29,25 @@ bossD = 15
 
 # startGame()
 def startgame():
+    while True:
 #   print statement welcoming player
-    print("You enter the pyramid, and the opening behind you crumbles shut, you are stuck")
+        print("You enter the pyramid, and the opening behind you crumbles shut, you are stuck")
 #   print backstory explaining where you are (in pyramid 
+        print("you had been exploring near a pyramid, when you found a small entrance near the back and entered it, you dont know what lies beyond")
 #   ask user if they wish to play the game now that they know what happens
+        play = input("do you wish to continue Y or N?")
 #   if yes go to room1
+        if play == "Y":
+            print("eras")
 #   if no exit game (break)
+        elif play == "N":
+            print("BYE BYE")
+            break
+        
+
 
 # combat()    health and damage
+def combat()
 #     player chooses attack or defense
 #   update player health and enemy health based on damage and defense
 #   loop keeps going until one reaches 0
