@@ -47,9 +47,11 @@ def startgame():
 
 
 # combat()    health and damage
-def combat()
-#     player chooses attack or defense
+def combat():
+#     player chooses attack 
+        fight = input("do you want to fight or give up")
 #   update player health and enemy health based on damage and defense
+        
 #   loop keeps going until one reaches 0
 #   return win or lose 
 

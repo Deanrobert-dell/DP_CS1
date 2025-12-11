@@ -117,6 +117,81 @@ t.left(90)
 t.forward(10)
 
 
+t.penup()
+t.home()
+t.setpos(30,100)
+t.pendown()
+t.right(15)
+t.forward(60)
+t.right(45)
+t.forward(30)
+t.left(70)
+t.forward(70)
+t.left(25)
+t.forward(45)
+t.right(50)
+t.forward(50)
+#hook end of top teeth
+t.left(115)
+t.forward(20)
+t.right(25)
+t.forward(30)
+t.left(75)
+t.forward(15)
+t.left(10)
+t.forward(30)
+t.left(15)
+t.forward(35)
+t.right(20)
+t.forward(35)
+t.right(180)
+t.forward(35)
+t.left(145)
+t.forward(35)
+t.left(60)
+t.forward(25)
+#above eye
+t.right(20)
+t.forward(55)
+t.left(25)
+t.forward(65)
+t.left(32)
+t.forward(110)
+t.left(40)
+t.forward(45)
+
+t.left(20)
+t.forward(50)
+
+t.left(90)
+t.forward(20)
+
+t.left(75)
+t.forward(25)
+t.setpos(30, 100)
+
+t.penup()
+t.home()
+t.setpos(40, 175)
+t.pendown()
+
+t.left(25)
+t.forward(30)
+
+t.right(70)
+t.forward(40)
+t.right(70)
+t.forward(20)
+
+
+
+
+
+
+
+
+
+
 
 turtle.done()
 
