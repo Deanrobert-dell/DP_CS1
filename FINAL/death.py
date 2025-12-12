@@ -1,6 +1,9 @@
 import turtle
 import time
 
+screen = turtle.Screen()
+
+
 e = turtle.Turtle()
 e.width(3)
 e.speed(0)
@@ -182,6 +185,143 @@ t.right(70)
 t.forward(40)
 t.right(70)
 t.forward(20)
+
+t.right(40)
+t.forward(30)
+
+t.right(40)
+t.forward(20)
+
+t.right(35)
+t.forward(25)
+t.setpos(40, 175)
+
+t.penup()
+t.home()
+
+t.setpos(255, 85)
+t.pendown()
+
+
+t.right(80)
+t.forward(25)
+
+t.right(35)
+t.forward(22)
+t.right(150)
+t.forward(20)
+t.left(20)
+t.forward(10)
+t.setpos(255, 85)
+
+t.penup()
+t.home()
+t.setpos(245, 70)
+t.left(170)
+t.pendown()
+t.forward(20)
+
+t.penup()
+t.home()
+t.setpos(210, 95)
+t.pendown()
+
+t.right(60)
+t.forward(25)
+t.right(40)
+t.forward(32)
+
+t.right(155)
+t.forward(25)
+t.left(35)
+t.forward(12)
+
+t.left(80)
+t.forward(30)
+t.right(28)
+t.forward(70)
+t.right(95)
+t.forward(18)
+
+
+t.penup()
+t.home()
+t.left(100)
+t.setpos(130, 43)
+t.pendown()
+t.forward(18)
+
+t.penup()
+t.setpos(145, 48)
+t.pendown()
+t.forward(17)
+
+t.penup()
+t.setpos(160, 52)
+t.pendown()
+t.forward(17)
+
+t.penup()
+t.setpos(175, 56)
+t.pendown()
+t.forward(17)
+
+t.penup()
+t.setpos(190, 64)
+t.pendown()
+t.forward(15)
+
+t.penup()
+t.setpos(198, 72)
+t.pendown()
+t.left(30)
+t.forward(15)
+
+t.penup()
+t.setpos(225, 75)
+t.pendown()
+t.right(35)
+t.forward(18)
+
+t.penup()
+t.setpos(238, 73)
+t.pendown()
+t.right(20)
+t.forward(17)
+
+time.sleep(1)
+
+
+t2= turtle.Turtle()
+font_style = ("Times New Roman", 25, "normal")
+t2.hideturtle()
+t2.penup()
+t2.goto(100,-150)
+t2.pendown()
+t2.write("You defeated Anubis, protector of the after life", font=font_style, align="center")
+
+time.sleep(.5)
+
+time.sleep(.5)
+
+t2= turtle.Turtle()
+font_style = ("Times New Roman", 25, "normal")
+t2.hideturtle()
+t2.penup()
+t2.goto(100,-200)
+t2.pendown()
+t2.write("click to continue", font=font_style, align="center")
+
+screen.exitonclick()
+
+
+
+
+
+
+
+
+
 
 
 
