@@ -2,7 +2,7 @@
 import turtle
 import random
 # variables: health, damage, defense
-hp = 200
+hp = 100
 dp = 10
 defense = 0
 
@@ -324,19 +324,14 @@ screen.exitonclick()
 
 # startGame()
 def startgame():
+    global room1, room2, room3, room4, room5, room6, room7, roomSecret, roomBoss
     while True:
-        
-#   print statement welcoming player
         print("You enter the pyramid, and the opening behind you crumbles shut, you are stuck")
-#   print backstory explaining where you are (in pyramid 
         print("You had been exploring near a pyramid when you found a small entrance and went inside.")
-#   ask user if they wish to play the game now that they know what happens
         play = input("Do you wish to continue? (Y/N): ").upper()
-#   if yes go to room1
         if play == "Y":
             room1_func()
             break
-#   if no exit game (break)
         elif play == "N":
             print("BYE BYE")
             break
@@ -344,18 +339,15 @@ def startgame():
 
 # combat()    health and damage
 def combat(enemy_hp, enemy_damage):
-#     player chooses attack 
     global hp
-    while enemy_hp > 0 and hp > 0:
+    current_enemy_hp = enemy_hp
+    while current_enemy_hp > 0 and hp > 0:
         choice = input("Fight or give up? (F/G): ").upper()
-#   update player health and enemy health based on damage and defense
         if choice == "G":
             return False
-        enemy_hp -= dp
+        current_enemy_hp -= dp
         hp -= max(enemy_damage - defense, 0)
-        print(f"Enemy HP: {enemy_hp} | Your HP: {hp}")
-#   loop keeps going until one reaches 0
-#   return win or lose 
+        print(f"Enemy HP: {current_enemy_hp} | Your HP: {hp}")
     return hp > 0
 
 
@@ -374,11 +366,11 @@ def pickupitem(item):
 def changestats(item):
     global hp, dp, defense
     if item == "mummy toe":
-        hp += 10
+        hp += 50
     elif item == "khopesh":
-        dp += 3
+        dp += 5
     elif item == "scarab shield":
-        defense += 2
+        defense += 4
 
 
 # restartghame()
@@ -387,6 +379,7 @@ def changestats(item):
 #   reset enemy defeated variables
 #   send player back to start game function
 #basically start over
+
 def restartgame():
     global hp, dp, defense, items
     global room1, room2, room3, room4, room5, room6, room7, roomSecret, roomBoss
@@ -402,12 +395,10 @@ def restartgame():
 
 # ROOM1
 def room1_func():
-# just entered pyramid, entrance closed behind you
+    global room1
+    room1 = True
     print("You are in the entrance chamber.")
-# there is a path to left and forward
     choice = input("Go to room 2(1) or room 3 (2)? ")
-# user input where to go
-# leads to room2 or room3
     if choice == "1":
         room2_func()
     else:
@@ -415,95 +406,88 @@ def room1_func():
 
 
 # ROOM2
+# ROOM2
 def room2_func():
-# there is a chest in the corner it has a combination lock choose 1 or 2 to open (will make random so cant repeat on playthrough)
-    global hp
-    import random
+    global room2, hp
+    if room2:
+        print("You already visited this room.")
+        room1_func()
+        return
+    room2 = True
     correct = random.choice(["1", "2"])
     guess = input("Chest lock: choose 1 or 2: ")
-# if wrong input take damage
     if guess != correct:
         hp -= 5
         print("Trap! You take damage.")
-# if right find cheesy mummy toe, eat to get +2 health
     else:
         if pickupitem("mummy toe"):
             changestats("mummy toe")
-            print("You gained +2 health!")
-# check if item already in inventory
+            print("You gained +2 health! from eating mummy toe")
     room1_func()
 
 
 # ROOM3
+# ROOM3
 def room3_func():
-# description of the room
+    global room3
+    room3 = True
     print("A dusty hall with a suspiucious cracked wall.")
-# do you wish to investigate suspicious wall, or move on forward or to the right
     choice = input("INVESTIGATE or MOVE to room 4 ").upper()
-# suspicious wall leads to secret room
     if choice == "INVESTIGATE":
         roomsecret_func()
-# nothing else in room
     else:
         room4_func()
 
 
 # SECRET ROOM
+# SECRET ROOM
 def roomsecret_func():
-# only allow entry if sroom var is False
     global roomSecret
     if roomSecret:
         room3_func()
-# once entered set secret room variable  to True
+        return
     roomSecret = True
-# special interaction or item here (tbd
     if pickupitem("scarab shield"):
         changestats("scarab shield")
         print("You gained +2 defense!")
         print("you exit to room 5")
-# leads back to room3 or room5
     room5_func()
 
 
 # ROOM4
 def room4_func():
-# as player enters, they are attackeed by a mummy for -1 health
-    global hp
+    global hp, room4
+    room4 = True
     hp -= 1
     print("A mummy attacks!")
-# if player dies allow them to restart
     if not combat(mummy, mummyD):
         restartgame()
-# if player wins recieve khopesh sword for +2 damage
+        return
     if pickupitem("khopesh"):
         print('you picked up the mummies khopesh for + 3 damage, (a khopesh is an ancient egyptian sword, it is curved forward to be better at chopping, but curves back straight to align with the tang of the blade, mkaing it useful for stabbing too)')
         changestats("khopesh")
-# check mummy var so fight doesn't happen again
     room5_func()
 
 
 # ROOM5
 def room5_func():
+    global hp, dp, defense, room5
+    room5 = True
     randstat = random.randint(1,3)
-# as player enters there is a well
-    global hp
     well = input("There is a dark well, sacrifice 1 health for random stat increase Y/N.").upper()
     if well == "Y":
-# sacrifice 1 health to gain random item
-                hp -= 1
-                if randstat == 1:
-                    hp+=10
-                    print("plus 10 health")
-                elif randstat == 2:
-                    dp += 4
-                    print("plus 4 damage")
-                elif randstat == 3:
-                    defense+=2
-                    print("plus 2 defense")
-
+        hp -= 1
+        if randstat == 1:
+            hp += 10
+            print("plus 10 health")
+        elif randstat == 2:
+            dp += 4
+            print("plus 4 damage")
+        elif randstat == 3:
+            defense += 2
+            print("plus 2 defense")
     else:
         print("it was only 1 health, anyway time to move")
-# leads to rooms 3, 2, and 7
     choice = input("Go to ROOM3, ROOM2, or ROOM7? ").upper()
     if choice == "ROOM7":
         room7_func()
@@ -515,39 +499,40 @@ def room5_func():
 
 # ROOM6
 def room6_func():
-# as they enter they fightt giant scarab beetle
+    global room6
+    room6 = True
     print("A giant scarab attacks!")
-# if player wins they can equip scarab shell shield for +2 defense
     if combat(scarab, scarabD):
         if pickupitem("scarab shield"):
             print("you picked up the scarabs shell, you can use it as a sheild for +2 defense")
             changestats("scarab shield")
-# check scarab var so it doesn't fight again
-    room7_func()
+            
+    choice2 = input("Go to ROOM7, or ROOM5? ").upper()
+    if choice == "ROOM7":
+        room7_func()
+    elif choice == "ROOM5":
+        room5_func()
 
 
 # ROOM7
 def room7_func():
-# in the room there are 3 alters each one with an item for either health damage or deffense
+    global hp, dp, defense, room7
+    room7 = True
     choice = input("you enter and see 3 alters, each can increase a statChoose altar: HEALTH, DAMAGE, or DEFENSE: ").upper()
     print("your stat increases, but a door opens, the room your in crumbles and you run into the finl room.")
-# the player thinks they can get adll three
-# but once they get one the room is destroyed
     if choice == "HEALTH":
-        hp += 10
+        hp += 20
     elif choice == "DAMAGE":
         dp += 3
     else:
         defense += 3
-# they are forced into the boss room (finalRoom)
     roomfinal_func()
 
 
 # FINAL ROOM
 def roomfinal_func():
-# contains final boss combat
+    global boss
     print("The final boss awakens, anubis, the god of the afterlife arises")
-# if win print victory message 
     if combat(boss, bossD):
         import turtle
         import time
@@ -843,30 +828,29 @@ def roomfinal_func():
         time.sleep(1)
 
 
-        t2= turtle.Turtle()
+        t3= turtle.Turtle()
         font_style = ("Times New Roman", 25, "normal")
-        t2.hideturtle()
-        t2.penup()
-        t2.goto(100,-150)
-        t2.pendown()
-        t2.write("You defeated Anubis, protector of the after life", font=font_style, align="center")
+        t3.hideturtle()
+        t3.penup()
+        t3.goto(100,-150)
+        t3.pendown()
+        t3.write("You defeated Anubis, protector of the after life", font=font_style, align="center")
 
         time.sleep(.5)
 
         time.sleep(.5)
 
-        t2= turtle.Turtle()
+        t3= turtle.Turtle()
         font_style = ("Times New Roman", 25, "normal")
-        t2.hideturtle()
-        t2.penup()
-        t2.goto(100,-200)
-        t2.pendown()
-        t2.write("click to continue", font=font_style, align="center")
+        t3.hideturtle()
+        t3.penup()
+        t3.goto(100,-200)
+        t3.pendown()
+        t3.write("click to continue", font=font_style, align="center")
 
         screen1.exitonclick()
         print("YOU ESCAPED THE PYRAMID VICTOrRIOUS!, escaping with the skull of the jackal headed god")
-        turtle.done
-# if lose ask if they wsant to restartGame() and call them loser
+        turtle.done()
     else:
         print("You lost. Anubis rips out your heart and sends you to Duat. ")
         restartgame()
