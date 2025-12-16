@@ -457,7 +457,7 @@ def roomsecret_func():
     roomSecret = True
     if pickupitem("scarab shield"):
         changestats("scarab shield")
-        print("You gained +4 defense!")
+        print("You gained +4 defense! from a sheild you found in this secret room")
         print("you exit to room 5")
     room5_func()
 
@@ -516,9 +516,9 @@ def room6_func():
             changestats("scarab shield")
             
     choice2 = input("Go to ROOM7, or ROOM5? ").upper()
-    if choice == "ROOM7":
+    if choice2 == "ROOM7":
         room7_func()
-    elif choice == "ROOM5":
+    elif choice2 == "ROOM5":
         room5_func()
 
 
@@ -857,6 +857,7 @@ def roomfinal_func():
         t3.write("click to continue", font=font_style, align="center")
 
         screen1.exitonclick()
+
         print("YOU ESCAPED THE PYRAMID VICTOrRIOUS!, escaping with the skull of the jackal headed god")
 
     else:
