@@ -387,7 +387,15 @@ def restartgame():
     dp = 10
     defense = 0
     items = []
-    room1 = room2 = room3 = room4 = room5 = room6 = room7 = roomSecret = roomBoss = False
+    room1 = false
+    room2 = false
+    room3 = false
+    room4 = false
+    room5 = false
+    room6 = false
+    room7 = false
+    roomSecret = false
+    roomBoss = false
     startgame()
 
 
@@ -397,7 +405,7 @@ def restartgame():
 def room1_func():
     global room1
     room1 = True
-    print("You are in the entrance chamber.")
+    print("You are in the entracnce chamber.")
     choice = input("Go to room 2(1) or room 3 (2)? ")
     if choice == "1":
         room2_func()
@@ -422,7 +430,7 @@ def room2_func():
     else:
         if pickupitem("mummy toe"):
             changestats("mummy toe")
-            print("You gained +2 health! from eating mummy toe")
+            print("You gained +2 heealth! from eating mummy toe")
     room1_func()
 
 
@@ -432,7 +440,7 @@ def room3_func():
     global room3
     room3 = True
     print("A dusty hall with a suspiucious cracked wall.")
-    choice = input("INVESTIGATE or MOVE to room 4 ").upper()
+    choice = input("INVESTIGATE or MoVE to room 4 ").upper()
     if choice == "INVESTIGATE":
         roomsecret_func()
     else:
