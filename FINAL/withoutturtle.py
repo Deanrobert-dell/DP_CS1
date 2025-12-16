@@ -94,15 +94,15 @@ def restartgame():
     dp = 10
     defense = 0
     items = []
-    room1 = false
-    room2 = false
-    room3 = false
-    room4 = false
-    room5 = false
-    room6 = false
-    room7 = false
-    roomSecret = false
-    roomBoss = false
+    room1 = False
+    room2 = False
+    room3 = False
+    room4 = False
+    room5 = False
+    room6 = False
+    room7 = False
+    roomSecret = False
+    roomBoss = False
     startgame()
 
 
