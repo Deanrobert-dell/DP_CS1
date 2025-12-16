@@ -1,10 +1,10 @@
-import turtle
+import turtle as trutle
 import time
 
-screen = turtle.Screen()
+screen = trutle.Screen()
 
 
-e = turtle.Turtle()
+e = trutle.Turtle()
 e.width(3)
 e.speed(0)
 e.hideturtle()
@@ -76,7 +76,7 @@ e.forward(10)
 e.setpos(120,30)
 e.setpos(113,22)
 
-t = turtle.Turtle()
+t = trutle.Turtle()
 t.hideturtle()
 t.width(3)
 t.speed(0)
@@ -292,7 +292,7 @@ t.forward(17)
 time.sleep(1)
 
 
-t3= turtle.Turtle()
+t3= trutle.Turtle()
 font_style = ("Times New Roman", 25, "normal")
 t3.hideturtle()
 t3.penup()
@@ -304,7 +304,7 @@ time.sleep(.5)
 
 time.sleep(.5)
 
-t3= turtle.Turtle()
+t3= trutle.Turtle()
 font_style = ("Times New Roman", 25, "normal")
 t3.hideturtle()
 t3.penup()
