@@ -464,7 +464,7 @@ def room4_func():
         restartgame()
         return
     if pickupitem("khopesh"):
-        print('you picked up the mummies khopesh for + 3 damage, (a khopesh is an ancient egyptian sword, it is curved forward to be better at chopping, but curves back straight to align with the tang of the blade, mkaing it useful for stabbing too)')
+        print("you picked up the mummies khopesh for + 3 damage, (a khopesh is an ancient egygptian sword, it is curved forward to be better at chopping, but curves back straight to align with the tang of the blade, mkaing it useful for stabbing too)")
         changestats("khopesh")
     room5_func()
 
@@ -850,7 +850,7 @@ def roomfinal_func():
 
         screen1.exitonclick()
         print("YOU ESCAPED THE PYRAMID VICTOrRIOUS!, escaping with the skull of the jackal headed god")
-        turtle.done()
+
     else:
         print("You lost. Anubis rips out your heart and sends you to Duat. ")
         restartgame()
