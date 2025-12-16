@@ -5,7 +5,7 @@ import random
 hp = 200
 dp = 10
 defense = 0
-randstat = random.randint(1,3)
+
 # dictionary for inventory
 items = []
 # boolean variables for each room so interactions can't happen twice
@@ -484,6 +484,7 @@ def room4_func():
 
 # ROOM5
 def room5_func():
+    randstat = random.randint(1,3)
 # as player enters there is a well
     global hp
     well = input("There is a dark well, sacrifice 1 health for random stat increase Y/N.").upper()
