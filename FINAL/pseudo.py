@@ -387,15 +387,15 @@ def restartgame():
     dp = 10
     defense = 0
     items = []
-    room1 = false
-    room2 = false
-    room3 = false
-    room4 = false
-    room5 = false
-    room6 = false
-    room7 = false
-    roomSecret = false
-    roomBoss = false
+    room1 = False
+    room2 = False
+    room3 = False
+    room4 = False
+    room5 = False
+    room6 = False
+    room7 = False
+    roomSecret = False
+    roomBoss = False
     startgame()
 
 
@@ -430,7 +430,7 @@ def room2_func():
     else:
         if pickupitem("mummy toe"):
             changestats("mummy toe")
-            print("You gained +2 heealth! from eating mummy toe")
+            print("You gained +50 heealth! from eating mummy toe")
     room1_func()
 
 
@@ -457,7 +457,7 @@ def roomsecret_func():
     roomSecret = True
     if pickupitem("scarab shield"):
         changestats("scarab shield")
-        print("You gained +2 defense!")
+        print("You gained +4 defense!")
         print("you exit to room 5")
     room5_func()
 
@@ -472,7 +472,7 @@ def room4_func():
         restartgame()
         return
     if pickupitem("khopesh"):
-        print("you picked up the mummies khopesh for + 3 damage, (a khopesh is an ancient egygptian sword, it is curved forward to be better at chopping, but curves back straight to align with the tang of the blade, mkaing it useful for stabbing too)")
+        print("you picked up the mummies khopesh for + 5 damage, (a khopesh is an ancient egygptian sword, it is curved forward to be better at chopping, but curves back straight to align with the tang of the blade, mkaing it useful for stabbing too)")
         changestats("khopesh")
     room5_func()
 
