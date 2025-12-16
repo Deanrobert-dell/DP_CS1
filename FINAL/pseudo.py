@@ -551,7 +551,7 @@ def roomfinal_func():
         import turtle
         import time
 
-        screen = turtle.Screen()
+        screen1 = turtle.Screen()
 
 
         e = turtle.Turtle()
@@ -862,7 +862,7 @@ def roomfinal_func():
         t2.pendown()
         t2.write("click to continue", font=font_style, align="center")
 
-        screen.exitonclick()
+        screen1.exitonclick()
         print("YOU ESCAPED THE PYRAMID VICTOrRIOUS!, escaping with the skull of the jackal headed god")
         turtle.done
 # if lose ask if they wsant to restartGame() and call them loser
