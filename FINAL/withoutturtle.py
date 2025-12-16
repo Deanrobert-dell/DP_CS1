@@ -223,9 +223,9 @@ def room6_func():
             changestats("scarab shield")
             
     choice2 = input("Go to ROOM7, or ROOM5? ").upper()
-    if choice == "ROOM7":
+    if choice2 == "ROOM7":
         room7_func()
-    elif choice == "ROOM5":
+    elif choice2 == "ROOM5":
         room5_func()
 
 

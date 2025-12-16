@@ -292,25 +292,25 @@ t.forward(17)
 time.sleep(1)
 
 
-t2= turtle.Turtle()
+t3= turtle.Turtle()
 font_style = ("Times New Roman", 25, "normal")
-t2.hideturtle()
-t2.penup()
-t2.goto(100,-150)
-t2.pendown()
-t2.write("You defeated Anubis, protector of the after life", font=font_style, align="center")
+t3.hideturtle()
+t3.penup()
+t3.goto(100,-150)
+t3.pendown()
+t3.write("You defeated Anubis, protector of the after life", font=font_style, align="center")
 
 time.sleep(.5)
 
 time.sleep(.5)
 
-t2= turtle.Turtle()
+t3= turtle.Turtle()
 font_style = ("Times New Roman", 25, "normal")
-t2.hideturtle()
-t2.penup()
-t2.goto(100,-200)
-t2.pendown()
-t2.write("click to continue", font=font_style, align="center")
+t3.hideturtle()
+t3.penup()
+t3.goto(100,-200)
+t3.pendown()
+t3.write("click to continue", font=font_style, align="center")
 
 screen.exitonclick()
 
@@ -333,6 +333,6 @@ screen.exitonclick()
 
 
 
-turtle.done()
+
 
 

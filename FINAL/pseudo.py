@@ -542,10 +542,11 @@ def roomfinal_func():
     global boss
     print("The final boss awakens, anubis, the god of the afterlife arises")
     if combat(boss, bossD):
+
         import turtle
         import time
 
-        screen1 = turtle.Screen()
+        screen = turtle.Screen()
 
 
         e = turtle.Turtle()
@@ -856,7 +857,7 @@ def roomfinal_func():
         t3.pendown()
         t3.write("click to continue", font=font_style, align="center")
 
-        screen1.exitonclick()
+        screen.exitonclick()
 
         print("YOU ESCAPED THE PYRAMID VICTOrRIOUS!, escaping with the skull of the jackal headed god")
 
